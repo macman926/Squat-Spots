@@ -27,12 +27,12 @@ def manage_client(conn, addr):
             conn.sendall(json.dumps(spots).encode())
 
 def main():
-    print('waiting')
     with socket.socket(socket.AF_INET,
                        socket.SOCK_STREAM) as s:
         s.bind((HOST, PORT))
         while True:
             s.listen()
+            print('waiting')
             conn, addr = s.accept()
             print('found something')
             thread = th.Thread(target=manage_client,
