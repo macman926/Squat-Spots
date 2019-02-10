@@ -9,7 +9,6 @@
       #map {
         height: 100%;
         width: 100%;
-        background-color: grey;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -24,11 +23,41 @@
     <script>
     var map;
      function initMap() {
-       var br1 = {lat: 42.094318, lng: -75.960263};
        var center = {lat: 42.08925, lng: -75.96989};
-       map = new google.maps.Map(document.getElementById('map'), {center: center ,zoom: 18});
-       var mk1 = new google.maps.Marker({position: br1, map: map});
+       map = new google.maps.Map(document.getElementById('map'), {center: center ,zoom: 14.5});
+
+        var br1 = {lat: 42.094318, lng: -75.960263};
+        var mk1 = new google.maps.Marker({position: br1, map: map});
+
+        var br2 = {lat: 42.087638, lng: -75.972605};
+        var mk2 = new google.maps.Marker({position: br2, map: map});
+
+        var br3 = {lat: 42.087920, lng: -75.966913};
+        var mk3 = new google.maps.Marker({position: br3, map: map});
+
+        var br4 = {lat: 42.087779, lng:-75.963008};
+        var mk4 = new google.maps.Marker({position: br4, map: map});
+
+        var br5 = {lat: 42.087301, lng: -75.967096};
+        var mk5 = new google.maps.Marker({position: br5, map: map});
+
+        var br6 = {lat: 42.087918, lng: -75.966849};
+        var mk6 = new google.maps.Marker({position: br6, map: map});
+
+        var br7 = {lat: 42.086517, lng: -75.972573};
+        var mk7 = new google.maps.Marker({position: br7, map:map});
+
+        var br8 = {lat: 42.088838, lng: -75.968525};
+        var mk8 = new google.maps.Marker({position: br8, map:map});
+
+        var br9 = {lat: 42.088360, lng: -75.972140};
+        var mk9 = new google.maps.Marker({position: br9, map:map});
+
+        var br10 = {lat: 42.088345, lng: -75.967318};
+        var mk10 = new google.maps.Marker({position: br10, map:map});
+
         infoWindow = new google.maps.InfoWindow;
+
        if (navigator.geolocation){
          navigator.geolocation.getCurrentPosition(function(position) {
            var pos = {
